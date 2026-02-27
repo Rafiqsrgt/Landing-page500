@@ -1,0 +1,603 @@
+/* ============================================= */
+/* GLOBAL RESET */
+/* ============================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.aw-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================= */
+/* TOP CONTACT BAR */
+/* ============================================= */
+.aw-topbar {
+  background: #0f172a;
+  color: #cbd5f5;
+  font-size: 14px;
+}
+
+.aw-topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.aw-contact-left span {
+  margin-right: 20px;
+}
+
+/* ============================================= */
+/* HEADER & NAVIGATION */
+/* ============================================= */
+.aw-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.aw-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.aw-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f5a623;
+  letter-spacing: 0.4px;
+}
+
+.aw-nav {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* মেনুর লিংকগুলোর মাঝের গ্যাপ */
+}
+
+.aw-nav a {
+  text-decoration: none;
+  color: #334155;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.aw-nav a:hover {
+  color: #f5a623;
+}
+
+/* THEME TOGGLE BUTTON */
+.theme-btn {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #334155;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: #e2e8f0;
+}
+
+.aw-apply-btn {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.aw-apply-btn:hover {
+  opacity: 0.9;
+}
+
+.aw-mobile-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ============================================= */
+/* HERO SECTION */
+/* ============================================= */
+.aw-hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  padding: 100px 20px;
+}
+
+.aw-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.aw-hero-content h1 {
+  font-size: 44px;
+  line-height: 1.3;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.aw-hero-content p {
+  font-size: 18px;
+  color: #cbd5f5;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.aw-hero-cta {
+  display: inline-block;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 16px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+.aw-hero-cta:hover {
+  opacity: 0.9;
+}
+
+.aw-hero-trust {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.aw-hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ============================================= */
+/* GENERAL SECTIONS (How it works, Transparency, etc.) */
+/* ============================================= */
+.how-it-works, .pricing-transparency, .collective-buying, .no-lockins {
+  padding: 90px 8%;
+  background-color: #ffffff;
+}
+
+.section-header, .transparency-header, .collective-header, .lockin-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 60px auto;
+}
+
+.section-header h2, .transparency-header h2, .collective-header h2, .lockin-header h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  color: #0f1b2d;
+}
+
+.section-header p, .transparency-header p, .collective-header p, .lockin-header p {
+  font-size: 16px;
+  color: #5b667a;
+  line-height: 1.6;
+  
+}
+
+.steps-grid, .comparison-grid, .collective-grid, .lockin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.step-card, .comparison-box, .lockin-item {
+  background-color: #f4f6f8;
+  padding: 30px;
+  border: solid;
+  border-color: #f5a623;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+}
+
+.step-card { border-left: 5px solid #f5a623; }
+.highlight-box { border: 2px solid #f5a623; }
+
+.step-card:hover, .lockin-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.step-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: #f5a623;
+  margin-bottom: 15px;
+}
+
+.step-card h3, .comparison-box h3, .collective-content h3, .lockin-item h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #1c1f26;
+}
+
+.step-card p, .comparison-box ul li, .collective-content p, .collective-content ul li, .lockin-item p {
+  font-size: 15px;
+  color: #5b667a;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.comparison-box ul, .collective-content ul { list-style: none; }
+
+.transparency-trust, .collective-trust, .lockin-trust {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.transparency-trust p, .collective-trust p, .lockin-trust p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f1b2d;
+  border: solid 0.2px;
+  border-color: #f5a623;
+}
+
+/* ============================================= */
+/* DARK BACKGROUND SECTIONS (Price Tracking, Fees, Compliance) */
+/* ============================================= */
+.price-tracking, .fees-section, .wholesaler-alignment, .compliance-ethics {
+  padding: 100px 8%;
+  background: linear-gradient(135deg, #0f1b2d, #1f2f4a);
+  color: #ffffff;
+}
+
+.tracking-container, .fees-header, .alignment-header, .compliance-header {
+  max-width: 750px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+.alignment-header p{
+   border: solid 0.2px;
+  border-color: #f5a623;
+}
+.tracking-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  text-align: left;
+  max-width: 1200px;
+}
+
+.tracking-text, .tracking-visual { flex: 1; }
+.tracking-visual img { width: 100%; border-radius: 12px; box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+
+h2 { font-size: 34px; margin-bottom: 20px; }
+.tracking-intro, .fees-header p, .alignment-header p, .compliance-header p {
+  font-size: 16px;
+  color: #d4d9e3;
+  line-height: 1.7;
+}
+
+.tracking-features, .alignment-box ul, .compliance-box ul, .fee-highlight ul { list-style: none; }
+.tracking-features li, .alignment-box ul li, .compliance-box ul li, .fee-highlight ul li {
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #e3e8f2;
+}
+
+.fee-highlight {
+  background-color: #ffffff;
+  color: #1c1f26;
+  padding: 45px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  text-align: left;
+}
+.fee-highlight h3 { color: #f5a623; margin-bottom: 20px; }
+
+.alignment-grid, .compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.alignment-box, .compliance-box {
+  background-color: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
+.alignment-box h3, .compliance-box h3 { color: #f5a623; margin-bottom: 20px; font-size: 20px; }
+
+.fees-trust, .alignment-trust, .compliance-trust { margin-top: 60px; text-align: center; }
+
+/* ============================================= */
+/* FAQ SECTION */
+/* ============================================= */
+.aw-faq-section { background: #ffffff; padding: 80px 20px; }
+.aw-faq-title { text-align: center; color: #0f172a; }
+.aw-faq-subtitle { text-align: center; color: #475569; margin-bottom: 40px; }
+
+.aw-faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  background: #ffffff;
+}
+
+.aw-faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.aw-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  color: #334155;
+  font-size: 15px;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  line-height: 1.6;
+}
+
+.aw-faq-item.active { border-color: #0f172a; }
+.aw-faq-item.active .aw-faq-answer { padding-bottom: 18px; padding-top: 5px; }
+
+/* ============================================= */
+/* LEGAL & FOOTER */
+/* ============================================= */
+/* ============================================= */
+/* LEGAL & PRICING DISCLAIMER */
+/* ============================================= */
+.aw-legal-dark { 
+  background: #0f172a; 
+  padding: 80px 20px; 
+}
+
+/* লেখাগুলো যেন খুব বেশি ছড়িয়ে না যায় তাই কন্টেইনার ছোট করা হলো */
+.aw-legal-dark .aw-container {
+  max-width: 850px; 
+  margin: 0 auto;
+}
+
+.aw-legal-title { 
+  text-align: center; 
+  font-size: 28px; 
+  font-weight: 700; 
+  margin-bottom: 35px; 
+  color: #ffffff; 
+}
+
+/* আইনি লেখার জন্য সুন্দর একটি বক্স */
+.aw-legal-content {
+  background: rgba(255, 255, 255, 0.03); /* হালকা ট্রান্সপারেন্ট ব্যাকগ্রাউন্ড */
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left; /* লেখাগুলো বাম পাশ থেকে শুরু হবে, এতে গোছানো লাগবে */
+}
+
+.aw-legal-content p { 
+  margin-bottom: 18px; 
+  line-height: 1.8; 
+  font-size: 15px; 
+  color: #94a3b8 !important; /* হালকা ছাই রঙ, যা চোখের জন্য আরামদায়ক */
+}
+
+/* শেষের লাইনের নিচে যেন অতিরিক্ত ফাঁকা জায়গা না থাকে */
+.aw-legal-content p:last-child {
+  margin-bottom: 0;
+}
+.aw-compliance-light { 
+  background: #f8fafc; 
+  padding: 60px 20px;
+   }
+.aw-compliance-text h3 {
+ color: #0f172a;
+  margin-bottom: 16px;
+   }
+.aw-compliance-text ul {
+ padding-left: 18px;
+ color: #334155; 
+}
+
+.aw-footer-links {
+ display: flex; 
+ gap: 20px; 
+ margin-top: 20px; 
+}
+.aw-footer-links a { 
+  text-decoration: none; 
+  color: #0f172a; 
+  font-weight: 600; }
+
+/* ============================================= */
+/* FORMS & REVIEWS */
+/* ============================================= */
+.aw-forms-section, .aw-reviews-section, .aw-trust-visual-section { padding: 90px 20px; background: #ffffff; }
+.aw-forms-title, .aw-reviews-title { text-align: center; color: #0f172a; }
+.aw-forms-subtitle, .aw-reviews-subtitle { text-align: center; color: #475569; margin-bottom: 40px; }
+
+.aw-forms-grid, .aw-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.aw-form-card, .aw-review-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px;
+  background: #ffffff;
+}
+
+.aw-form-card input, .aw-form-card textarea {
+  width: 100%; padding: 12px; margin-bottom: 12px; border: 1px solid #cbd5f5; border-radius: 8px; font-size: 14px;
+}
+.aw-form-card button {
+  width: 100%; padding: 14px; background: #0f172a; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;
+}
+.aw-microcopy { font-size: 13px; color: #64748b; text-align: center; margin-top: 10px; }
+
+.aw-stars { color: #f5a623; margin-bottom: 10px; }
+.aw-review-text { color: #334155; margin-bottom: 15px; line-height: 1.6; }
+.aw-review-author { font-weight: 600; color: #0f172a; }
+
+.aw-trust-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.aw-trust-image img { width: 100%; border-radius: 12px; }
+.aw-trust-content h2 { color: #0f172a; }
+.aw-trust-content p, .aw-trust-content ul { color: #334155; }
+
+/* ============================================= */
+/* FINAL CTA */
+/* ============================================= */
+.aw-final-cta { background: #0f172a; color: white; padding: 100px 20px; text-align: center; }
+.aw-final-title { font-size: 34px; margin-bottom: 15px; }
+.aw-final-subtitle { color: #cbd5f5; margin-bottom: 35px; }
+.aw-final-button { background: white; color: #0f172a; padding: 16px 32px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+
+/* ============================================= */
+/* MOBILE RESPONSIVE */
+/* ============================================= */
+@media (max-width: 900px) {
+  .aw-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+    flex-direction: column;
+    gap: 20px;
+  }
+  .aw-nav.active { display: flex; }
+  .aw-mobile-toggle { display: block; }
+  .aw-apply-btn { display: none; }
+  .aw-hero-grid, .tracking-container, .aw-trust-grid { grid-template-columns: 1fr; text-align: center; flex-direction: column; }
+  .aw-hero-content h1 { font-size: 32px; }
+}
+
+/* ============================================= */
+/* DARK THEME OVERRIDES (FIXED VISIBILITY) */
+/* ============================================= */
+body.dark-theme {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark-theme .aw-header { background: #1e293b; border-color: #334155; }
+body.dark-theme .aw-nav { background: #1e293b; } /* For mobile menu */
+body.dark-theme .aw-nav a { color: #e2e8f0; }
+body.dark-theme .aw-nav a:hover { color: #f5a623; }
+body.dark-theme .theme-btn { border-color: #e2e8f0; color: #e2e8f0; }
+
+/* Sections Background in Dark Mode */
+body.dark-theme .how-it-works,
+body.dark-theme .pricing-transparency,
+body.dark-theme .no-lockins,
+body.dark-theme .collective-buying,
+body.dark-theme .aw-faq-section,
+body.dark-theme .aw-forms-section,
+body.dark-theme .aw-reviews-section,
+body.dark-theme .aw-trust-visual-section,
+body.dark-theme .aw-compliance-light {
+  background-color: #0f172a;
+}
+
+/* Card Backgrounds in Dark Mode */
+body.dark-theme .step-card,
+body.dark-theme .comparison-box,
+body.dark-theme .lockin-item,
+body.dark-theme .aw-faq-item,
+body.dark-theme .aw-faq-question,
+body.dark-theme .aw-form-card,
+body.dark-theme .aw-review-card,
+body.dark-theme .fee-highlight {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+/* Form inputs in Dark Mode */
+body.dark-theme input, 
+body.dark-theme textarea {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+/* TEXT VISIBILITY FIX: Force text to be light in dark mode */
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme .aw-faq-question,
+body.dark-theme .aw-review-author,
+body.dark-theme .aw-forms-title,
+body.dark-theme .aw-reviews-title,
+body.dark-theme .aw-faq-title,
+body.dark-theme .section-header h2,
+body.dark-theme .transparency-trust p,
+body.dark-theme .collective-trust p,
+body.dark-theme .lockin-trust p,
+body.dark-theme .aw-compliance-text h3 {
+  color: #f8fafc !important; /* উজ্জ্বল সাদা হেডিংয়ের জন্য */
+}
+
+body.dark-theme p,
+body.dark-theme ul li,
+body.dark-theme .section-header p,
+body.dark-theme .aw-faq-subtitle,
+body.dark-theme .aw-forms-subtitle,
+body.dark-theme .aw-reviews-subtitle,
+body.dark-theme .aw-faq-answer,
+body.dark-theme .aw-review-text,
+body.dark-theme .aw-trust-content p,
+body.dark-theme .aw-trust-content ul,
+body.dark-theme .aw-compliance-text ul,
+body.dark-theme .step-card p,
+body.dark-theme .comparison-box ul li,
+body.dark-theme .lockin-item p,
+body.dark-theme .fee-highlight p,
+body.dark-theme .fee-highlight ul li {
+  color: #cbd5e1 !important; /* প্যারাগ্রাফের জন্য হালকা ছাই-সাদা রঙ */
+}
+
+body.dark-theme .aw-footer-links a { color: #e2e8f0; }
+body.dark-theme .aw-footer-links a:hover { color: #f5a623; }
